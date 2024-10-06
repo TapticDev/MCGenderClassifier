@@ -1,5 +1,5 @@
 import tensorflow as tf
-from tensorflow.keras import layers, models
+from tensorflow.keras import layers, Sequential
 from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
@@ -40,7 +40,7 @@ for layer in base_model.layers:
     layer.trainable = False
 
 # Add custom top layers
-model = models.Sequential()
+model = Sequential()
 model.add(base_model)
 model.add(layers.GlobalAveragePooling2D())
 model.add(layers.Dense(128, activation='relu'))
@@ -50,7 +50,13 @@ model.add(layers.Dense(1, activation='sigmoid'))
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Train the model
-model.fit(train_generator, epochs=100, validation_data=validation_generator)
+model.fit(
+    train_generator,
+    epochs=100,
+    validation_data=validation_generator,
+    steps_per_epoch=train_generator.samples // train_generator.batch_size,
+    validation_steps=validation_generator.samples // validation_generator.batch_size
+)
 
 # Save the model
-model.save('minecraft_gender_classifier.h5')
+model.save('minecraft_gender_classifier_v2.h5')
