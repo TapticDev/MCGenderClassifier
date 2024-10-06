@@ -11,13 +11,14 @@ This Python script uses TensorFlow and Tkinter to predict the gender of a Minecr
 ## Dependencies
 
 - `PIL` (Pillow)
-- `requests`
+- `customtkinter`
 - `tensorflow==2.9.3`
 - `numpy`
 
+
 ## Installation
 
-1. Install the required dependencies using `pip install pillow requests tensorflow==2.9.3 numpy`.
+1. Install the required dependencies using `pip install pillow customtkinter tensorflow==2.9.3 numpy`.
 2. Run the script with `python mcgc.py`.
 
 ## Notes
