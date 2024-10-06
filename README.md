@@ -9,7 +9,6 @@ This Python script uses TensorFlow and Tkinter to predict the gender of a Minecr
 3. Click the "Load Skin" button to load and predict the gender.
 4. The predicted gender and confidence level will be displayed.
 5. A cube render (body render) of the player will be shown on the right.
-6. Optionally, click "Report as False Positive" to save the skin as a false positive.
 
 ## Dependencies
 
@@ -25,7 +24,7 @@ This Python script uses TensorFlow and Tkinter to predict the gender of a Minecr
 
 ## Notes
 
-- The trained model (`minecraft_gender_classifier.h5`) should be present in the same directory as the script.
+- The trained model (`classifier.h5`) should be present in the same directory as the script.
 - Ensure an internet connection for fetching player information and skins.
 
 ## License
