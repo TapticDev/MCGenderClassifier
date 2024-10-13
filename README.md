@@ -24,7 +24,6 @@ This Python script uses TensorFlow and Tkinter to predict the gender of a Minecr
 ## Notes
 
 - The trained model (`classifier.h5`) should be present in the same directory as the script.
-- Ensure an internet connection for fetching player information and skins.
 
 ## License
 
