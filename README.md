@@ -1,6 +1,6 @@
 # MCGenderClassifier
 
-This Python script uses TensorFlow and Tkinter to predict the gender of a Minecraft player based on their in-game skin. Additionally, it provides a feature to report false positives.
+This Python script uses TensorFlow and Custom Tkinter to predict the gender of a Minecraft Skin.
 
 ## Usage
 
